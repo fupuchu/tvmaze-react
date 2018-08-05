@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="results.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <div id="search">
+            {{ params1 }} {{ paramsCaps }}
+        </div> -->
+        <!-- <div id="example">
+            <p>Original message: "{{ message }}"</p>
+            <p>Computed reversed message: "{{ reversedMessage }}"</p>
+        </div> -->
+        <!-- <div id="app-6">
+            <input v-model="message">
+            <p>{{message}}</p>
+        </div> -->
+        <ul id="v-for-object" class="list">
+            <!-- v-for is vue's looping  -->
+            <li v-for="tvshow in tvshows">
+                <!-- props are all set in the js file, see main.js -->
+                <!-- databinding with images -->
+                <img v-bind:src="tvshow.show.image.medium">
+                <h2>{{ tvshow.show.name }}</h2>
+                <click-me></click-me>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
